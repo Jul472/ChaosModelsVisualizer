@@ -38,7 +38,7 @@ function rotate(array) {
 
 function lorenz() {
   clearInterval(interval);
-  context.clearRect(-300, -300, 600, 600);
+  context.clearRect(-300, -300, canvas.width, canvas.height);
 
   resetVariables(0.1, 0, 0.1);
 
@@ -55,7 +55,7 @@ function lorenz() {
     context.clearRect(-300, -300, canvas.width, canvas.height);
       
     //Canvas
-    const degradado = context.createLinearGradient(-300, -300, 600, 600);
+    const degradado = context.createLinearGradient(-300, -300, canvas.width, canvas.height);
     degradado.addColorStop(0, "red");
     degradado.addColorStop(0.4, "orange");
     degradado.addColorStop(0.7, "yellow");

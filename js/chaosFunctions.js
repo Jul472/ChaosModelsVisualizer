@@ -15,6 +15,11 @@ var dx;
 var dy;
 var dz;
 
+function clearCanvas(){
+  clearInterval(interval)
+  context.clearRect(-300, -300, canvas.width, canvas.height);
+}
+
 function resetVariables(x1, y1, z1) {
   x = x1;
   y = y1;
@@ -90,7 +95,7 @@ function lorenz() {
 
 function halvorsen() {
   clearInterval(interval);
-  context.clearRect(-300, -300, 600, 600);
+  context.clearRect(-300, -300, canvas.width, canvas.height);
 
   resetVariables(0.1, 0, 1);
 
@@ -102,7 +107,7 @@ function halvorsen() {
   let i = 1;
 
   interval = setInterval(function () {
-    context.clearRect(-300, -300, 600, 600);
+    context.clearRect(-300, -300, canvas.width, canvas.height);
 
     if (i < 3000) {
       // //Differential Equations
@@ -120,7 +125,7 @@ function halvorsen() {
     }
 
     //Canvas
-    const degradado = context.createLinearGradient(0, 0, 500, 500);
+    const degradado = context.createLinearGradient(0, 0, canvas.width, canvas.height);
     degradado.addColorStop(0, "#007E68");
     degradado.addColorStop(0.6, "#00B49B");
     degradado.addColorStop(0.8, "#39EDD1");
@@ -140,7 +145,7 @@ function halvorsen() {
 
 function aizawa() {
   clearInterval(interval);
-  context.clearRect(-300, -300, 600, 600);
+  context.clearRect(-300, -300, canvas.width, canvas.height);
 
   resetVariables(0.1, 0, 1);
 
@@ -157,7 +162,7 @@ function aizawa() {
   let i = 1;
 
   interval = setInterval(function () {
-    context.clearRect(-300, -300, 600, 600);
+    context.clearRect(-300, -300, canvas.width, canvas.height);
 
     if (i < 3000) {
       // //Differential Equations
@@ -181,7 +186,7 @@ function aizawa() {
     }
 
     //Canvas
-    const degradado = context.createLinearGradient(0, 0, 500, 500);
+    const degradado = context.createLinearGradient(0, 0, canvas.width, canvas.height);
     degradado.addColorStop(0, "#296073");
     degradado.addColorStop(0.6, "#3596B5");
     degradado.addColorStop(0.8, "#ADC5CF");
@@ -201,7 +206,7 @@ function aizawa() {
 
 function chen() {
   clearInterval(interval);
-  context.clearRect(-300, -300, 600, 600);
+  context.clearRect(-300, -300, canvas.width, canvas.height);
 
   resetVariables(0.1, 0, 1);
 
@@ -215,7 +220,7 @@ function chen() {
   let i = 1;
 
   interval = setInterval(function () {
-    context.clearRect(-300, -300, 600, 600);
+    context.clearRect(-300, -300, canvas.width, canvas.height);
 
     if (i < 3000) {
       // //Differential Equations
@@ -233,7 +238,7 @@ function chen() {
     }
 
     //Canvas
-    const degradado = context.createLinearGradient(0, 0, 500, 500);
+    const degradado = context.createLinearGradient(0, 0, canvas.width, canvas.height);
     degradado.addColorStop(0, "#B1002E");
     degradado.addColorStop(0.6, "#FD4D65");
     degradado.addColorStop(0.8, "#E73654");
@@ -254,7 +259,7 @@ function chen() {
 
 function dadras() {
   clearInterval(interval);
-  context.clearRect(-300, -300, 600, 600);
+  context.clearRect(-300, -300, canvas.width, canvas.height);
 
   resetVariables(0.1, 0, 1);
 
@@ -269,7 +274,7 @@ function dadras() {
   let i = 1;
 
   interval = setInterval(function () {
-    context.clearRect(-300, -300, 600, 600);
+    context.clearRect(-300, -300, canvas.width, canvas.height);
 
     if (i < 1000) {
       // //Differential Equations
@@ -287,7 +292,7 @@ function dadras() {
     }
 
     //Canvas
-    const degradado = context.createLinearGradient(0, 0, 500, 500);
+    const degradado = context.createLinearGradient(0, 0, canvas.width, canvas.height);
     degradado.addColorStop(0, "#1AEE64");
     degradado.addColorStop(0.6, "#00B77C");
     degradado.addColorStop(0.8, "#00CDFF");
